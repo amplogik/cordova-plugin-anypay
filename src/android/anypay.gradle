@@ -7,7 +7,7 @@ repositories{
 
 
 dependencies {
-    implementation (name: 'anypay', ext: 'aar')
+    implementation fileTree(dir: 'libs', include: ['*.aar'])
     implementation 'com.android.support:percent:25.3.1'
     implementation 'com.android.support:appcompat-v7:25.3.1'
     implementation('com.squareup.retrofit2:converter-gson:2.3.0') {
