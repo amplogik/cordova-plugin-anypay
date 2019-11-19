@@ -7,10 +7,10 @@ repositories{
 
 
 dependencies {
-    api(name: 'anypay', ext: 'aar')
-    implementation'com.android.support:percent:25.3.1'
-    implementation'com.android.support:appcompat-v7:25.3.1'
-    implementation('com.squareup.retrofit2:converter-gson:2.3.0') {
+    compile(name: 'anypay', ext: 'aar')
+    compile 'com.android.support:percent:25.3.1'
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    compile('com.squareup.retrofit2:converter-gson:2.3.0') {
         exclude module: 'gson'
     }
     compile('com.squareup.retrofit2:converter-simplexml:2.3.0') {
