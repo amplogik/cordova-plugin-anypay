@@ -1,7 +1,28 @@
 repositories{
     jcenter()
     flatDir {
-        dirs 'libs'
+/*
+<resource-file src="libs/android/com.anywherecommerce.android.sdk-release.aar" target="libs/anypay.aar" />
+
+When gradle runs the compilation using the line from the plugin.xml above,
+it searches for the libs in app/libs which is not present in the project 
+(it does in the standard Android Studio project, but in Cordova Android 
+project structure the libs folder is different). 
+
+However the plugin copies the aar library to app/src/main/libs which 
+can trick us into thinking that it copies the aar file to app/libs, or 
+'libs' as per the incorrect dirs entry below this comment.  It does not.
+
+The correct path to find the aar file is src/main/libs  
+
+I have fixed the dirs entry following the commented out one
+
+Also, note that the obsolete compile directive has been replaced by the
+correct implementation directive in the dependencies below
+
+*/
+	//dirs 'libs'
+        dirs 'src/main/libs'
     }
 }
 
